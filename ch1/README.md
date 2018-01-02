@@ -35,3 +35,38 @@ $ node request-downloadfile.js
 - `colors`パッケージ面白い。端末テキストに色を付けてくれる。
 - `npm run start`は`npm run`でもいける。
 - `npm run`で実行できるコマンドの一覧を表示
+
+## p.71
+
+`npm init` で対話型の設定プロンプトを省略する
+
+```bash
+$ npm init -y
+```
+
+Babelの基本的な使い方
+
+- `npm install`でpresetをインストールする
+- `babel`コマンドの`--preset`オプションにプリセットを指定する
+  - または`.babelrc`にプリセットを設定する
+
+# p.75
+
+ディレクトリ内のファイルを一気に変換
+
+```bash
+$ babel src -d dest
+$ babel --compact=true src -d dest  # コンパクトにする
+```
+
+## p.76
+
+ソースマップの出力
+
+```bash
+$ babel bmi.js -o bmi.out.js --source-maps
+```
+
+- 注意: `$ babel --source-maps bmi.js -o bmi.out.js` だとフリーズする
+  - `--source-maps` の引数を解釈しようとするので
+
